@@ -1,0 +1,45 @@
+{
+  "name": "Bug Report",
+  "description": "Bug report",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+      "service_worker": "background.js"
+  },
+  "content_scripts": [
+      {
+          "matches": [
+              "<all_urls>"
+          ],
+          "js": [
+              "content.js"
+          ],
+          "css": ["styles/styles.css"]
+      }
+  ],
+  "web_accessible_resources": [
+      "extention.html",
+      "assets/spinner.svg",
+      "styles/styles.css"
+  ],
+  "permissions": ["storage", "activeTab", "declarativeContent"],
+  "commands": {
+      "trigger_select": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+S",
+          "mac": "Command+Shift+S"
+        },
+        "description": "Hot Key for Selection"
+      },
+      "get_screenshot": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+U",
+          "mac": "Command+Shift+U"
+        },
+        "description": "Hot Key for Screenshot"
+      }
+  },
+  "browser_action": {
+      "default_icon": "assets/icon.png"
+  }
+}
