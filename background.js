@@ -24,7 +24,10 @@ chrome.commands.onCommand.addListener((command) => {
   //Cntr-Shift-S
   if (command === 'trigger_select') {
     console.log(command);
-    chrome.tabs.executeScript(null, {file: 'component.js'});
+    //chrome.tabs.executeScript(null, {file: 'component.js'});
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+      chrome.tabs.sendMessage(tabs[0].id, "trigger_select");  
+    });
   }
   
   //Cntr-Shift-U

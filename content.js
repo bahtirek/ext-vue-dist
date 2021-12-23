@@ -29,10 +29,7 @@ async function gotMessage(message, sender, sendResponse) {
      * Used for dynamic elements such as drop downs.
      */
     if (message == "trigger_select") {
-        window.bugReportextention.dynamicDomFlow = true;
-        const selectOperator = document.getElementById('ui-br-ext-select-button');
-        // Imitates the "select operator" click/selection via hot key combo.
-        activateOperator(selectOperator.id, selectOperator.classList);        
+        window.selectButtonComponent.toggleSelectButton();        
     }
 
     /**
@@ -41,7 +38,7 @@ async function gotMessage(message, sender, sendResponse) {
      * Used to take screenshot of dynamic elements.
      */
     if (message == "get_screenshot") {
-        window.bugReportextention.screenshot = await getScreenshot ();
+        window.reportBugComponent.getScreenshot();
         // turn on report bug
     }
     
