@@ -4,6 +4,9 @@ function buttonClicked(tab) {
   chrome.tabs.sendMessage(tab.id, "inject");
   chrome.tabs.executeScript(tab.id, {file: 'app.js'});
   chrome.tabs.executeScript(tab.id, {file: 'chunk-vendors.js'});
+  chrome.tabs.executeScript(tab.id, {file: 'chunk-2d216214.js'});
+  chrome.tabs.executeScript(tab.id, {file: 'chunk-2d216257.js'});
+  chrome.tabs.executeScript(tab.id, {file: 'chunk-38ad8d7d.js'});
 }
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
