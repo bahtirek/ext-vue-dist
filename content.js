@@ -18,8 +18,7 @@ async function gotMessage(message, sender, sendResponse) {
      * Triggered on extention button click.
      *  */ 
     if (message === 'inject') {
-        document.body.insertAdjacentHTML('beforeend', `<div id="ui-br-ext-extension-container"></div>`
-      );
+        document.body.insertAdjacentHTML('beforeend', `<div id="ui-br-ext-extension-container"></div>`);
     }
 
     /**

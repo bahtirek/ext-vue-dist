@@ -132,7 +132,6 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   display: block;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn-link {
-  margin-bottom: 20px;
   text-align: right;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn-link span {
@@ -140,20 +139,25 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   font-weight: bold;
   color: #00ad55;
   cursor: pointer;
+  /* &::before {
+                        content: "+";
+                        height: 14px;
+                        width: 14px;
+                        border-radius: 50%;
+                        padding: 0px 4px;
+                        border: 1px solid @primary-color;
+                        margin-right: 3px;
+                    }
+
+                    &.active::before {
+                        content: "-";
+                        padding: 0 6px;
+                    } */
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn-link span::before {
-  content: "+";
-  height: 14px;
-  width: 14px;
-  border-radius: 50%;
-  padding: 0px 4px;
-  border: 1px solid #00ad55;
-  margin-right: 3px;
-}
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item #ui-br-ext-new-project-cont {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-new-project-cont {
   padding-bottom: 30px;
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item #ui-br-ext-new-project-cont .ui-br-ext-form-container.ui-br-ext-textarea {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-new-project-cont .ui-br-ext-form-container.ui-br-ext-textarea {
   margin-bottom: 30px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container {
@@ -245,6 +249,29 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   left: 2px;
   display: block;
   color: red;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-icon {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-icon svg {
+  height: 20px;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results {
+  width: 100%;
+  padding-top: 10px;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul {
+  margin: 0;
+  padding: 0;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li {
+  padding: 5px 10px;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn {
   font-size: 14px !important;
@@ -354,12 +381,42 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container:first-child .ui-br-ext-setting-title {
   border-top: none;
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-body,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-body,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-body,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-body,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-body {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body {
   padding: 15px 0;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project {
+  padding: 0 5px;
+  color: #555555;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span {
+  font-weight: bold;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container {
+  margin-top: 20px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-box-resize,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-box-resize,
