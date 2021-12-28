@@ -174,10 +174,12 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   height: 18px;
   width: 18px;
   margin: 3px 10px 3px 4px;
+  cursor: pointer;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-checkbox label {
   font-size: 15px;
   font-weight: normal !important;
+  cursor: pointer;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-checkbox .ui-br-ext-disclaimer {
   font-size: 11px;
