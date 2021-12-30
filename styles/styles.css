@@ -24,6 +24,13 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   line-height: normal !important;
   font-style: arial;
 }
+@media (max-width: 767px) {
+  .ui-br-ext-extension {
+    left: 10px;
+    min-width: 250px;
+    max-width: 350px;
+  }
+}
 .ui-br-ext-extension.ui-br-ext-moving {
   opacity: 0.8;
 }
@@ -114,12 +121,38 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 }
 .ui-br-ext-extension .ui-br-ext-dropdown {
   cursor: default;
+  /* .ui-br-ext-view-bug {
+            width: 350px;
+        } */
+  /* .ui-br-ext-dom-warning {
+            color: red;
+            width: 350px;
+
+            p {
+                background-color: cornsilk;
+                margin: 0%;
+                padding: 16px;
+
+                span:not(.ui-br-ext-spinner) {
+                    font-size: 14px;
+                }
+            }
+
+            .ui-br-ext-spinner {
+                width: 35px;
+            }
+        } */
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item {
   padding-bottom: 10px;
   padding: 10px 10px;
   cursor: default;
   overflow: auto;
+}
+@media (max-width: 767px) {
+  .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item {
+    max-height: 500px;
+  }
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-drop-title {
   color: #00ad55;
@@ -139,20 +172,6 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   font-weight: bold;
   color: #00ad55;
   cursor: pointer;
-  /* &::before {
-                        content: "+";
-                        height: 14px;
-                        width: 14px;
-                        border-radius: 50%;
-                        padding: 0px 4px;
-                        border: 1px solid @primary-color;
-                        margin-right: 3px;
-                    }
-
-                    &.active::before {
-                        content: "-";
-                        padding: 0 6px;
-                    } */
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-new-project-cont {
   padding-bottom: 30px;
@@ -180,6 +199,8 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   font-size: 15px;
   font-weight: normal !important;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-checkbox .ui-br-ext-disclaimer {
   font-size: 11px;
@@ -523,24 +544,6 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-spinner.active {
   display: inline-block;
-}
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug {
-  width: 350px;
-}
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dom-warning {
-  color: red;
-  width: 350px;
-}
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dom-warning p {
-  background-color: cornsilk;
-  margin: 0%;
-  padding: 16px;
-}
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dom-warning p span:not(.ui-br-ext-spinner) {
-  font-size: 14px;
-}
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dom-warning .ui-br-ext-spinner {
-  width: 35px;
 }
 .ui-br-ext-extension .show {
   display: flex !important;
