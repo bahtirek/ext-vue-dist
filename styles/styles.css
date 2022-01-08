@@ -85,8 +85,8 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   left: 2px;
 }
 .ui-br-ext-extension .ui-br-ext-menu-container span:last-child {
-  margin-right: 2px;
-  margin-left: 8px;
+  /* margin-right: 2px;
+                margin-left: 8px; */
 }
 .ui-br-ext-extension .ui-br-ext-menu-container span.ui-br-ext-active svg {
   color: #00ad55;
@@ -121,9 +121,6 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 }
 .ui-br-ext-extension .ui-br-ext-dropdown {
   cursor: default;
-  /* .ui-br-ext-view-bug {
-            width: 350px;
-        } */
   /* .ui-br-ext-dom-warning {
             color: red;
             width: 350px;
@@ -359,14 +356,14 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review {
   flex-direction: column;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -375,39 +372,48 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-textarea,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-textarea,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-textarea,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-textarea {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-textarea {
   flex: 1 1 0;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-textarea:first-child,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-textarea:first-child,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-textarea:first-child,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-textarea:first-child,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-textarea:first-child {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-textarea:first-child {
   max-height: 15%;
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-title,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-title,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-title,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-title,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-title {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-title,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-title,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-title,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-title,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-title {
   color: #404040;
   font-size: 16px;
   font-weight: bold;
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-text,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-text,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-text,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-text,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-view-bug-box .ui-br-ext-view-bug-text {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-review-box .ui-br-ext-review-text {
   padding: 2px 0 20px;
   font-size: 15px;
   color: #666666;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title {
   border-top: 1px solid lightgrey;
   padding: 8px 5px;
   cursor: pointer;
@@ -418,7 +424,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title:hover,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title:hover,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title:hover,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title:hover {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-setting-title:hover {
   background-color: #f7f7f7;
   font-weight: bold;
 }
@@ -426,21 +432,21 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container:first-child .ui-br-ext-setting-title,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container:first-child .ui-br-ext-setting-title,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container:first-child .ui-br-ext-setting-title,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container:first-child .ui-br-ext-setting-title {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container:first-child .ui-br-ext-setting-title {
   border-top: none;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body {
   padding: 15px 0;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project {
   padding: 0 5px;
   color: #555555;
 }
@@ -448,14 +454,14 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project span {
   font-weight: bold;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-current-project div {
   margin-top: 5px;
   font-size: 12px;
 }
@@ -463,28 +469,28 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container {
   margin-top: 20px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-info-list li,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-info-list li,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-info-list li,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-info-list li,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-info-list li {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-info-list li {
   margin-bottom: 5px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-info-list li span:last-child,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-info-list li span:last-child,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-info-list li span:last-child,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-info-list li span:last-child,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-drop-body .ui-br-ext-info-list li span:last-child {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-info-list li span:last-child {
   font-size: 15px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-box-resize,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-box-resize,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-box-resize,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-box-resize,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-box-resize {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-box-resize {
   position: absolute;
   right: -1px;
   bottom: -1px;
@@ -496,7 +502,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-box-resize svg,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-box-resize svg,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-box-resize svg,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug .ui-br-ext-box-resize svg {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-box-resize svg {
   height: 14px;
   width: 14px;
   transform: rotate(-45deg);
@@ -506,7 +512,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select.ui-br-ext-active,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments.ui-br-ext-active,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings.ui-br-ext-active,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-view-bug.ui-br-ext-active {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review.ui-br-ext-active {
   display: flex;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments {
@@ -544,6 +550,9 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-spinner.active {
   display: inline-block;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review {
+  width: 350px;
 }
 .ui-br-ext-extension .show {
   display: flex !important;

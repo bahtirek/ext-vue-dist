@@ -37,7 +37,7 @@ async function gotMessage(message, sender, sendResponse) {
      * Used to take screenshot of dynamic elements.
      */
     if (message == "get_screenshot") {
-        window.reportBugComponent.getScreenshot();
+        window.selectButtonComponent.getScreenshot();
         // turn on report bug
     }
     
