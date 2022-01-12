@@ -108,7 +108,8 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   width: fit-content;
   transition: 0.1s ease-out;
   background: #ffffff;
-  padding: 2px;
+  padding: 2px 4px;
+  border-radius: 3px;
   white-space: nowrap;
 }
 .ui-br-ext-extension .ui-br-ext-menu-container span:after {
@@ -400,11 +401,18 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   font-size: 15px;
   color: #666666;
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text,
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-review-box.ellipsis .ui-br-ext-review-text {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis {
+  cursor: pointer;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis .ui-br-ext-review-text,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis .ui-br-ext-review-text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
