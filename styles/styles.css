@@ -17,11 +17,13 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   font-family: Roboto;
   flex-direction: column;
   pointer-events: initial !important;
-  min-width: 350px;
+  min-width: 300px;
   padding-bottom: 10px;
   background-color: #ffffff;
   z-index: 99999999;
   line-height: normal !important;
+  /* Video Recorder Styles START */
+  /* Video Recorder Styles START */
 }
 @media (max-width: 767px) {
   .ui-br-ext-extension {
@@ -83,9 +85,6 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   top: 2px;
   left: 2px;
 }
-.ui-br-ext-extension .ui-br-ext-menu-container span svg.ui-bt-ext-stop-button {
-  color: #e04414;
-}
 .ui-br-ext-extension .ui-br-ext-menu-container span:last-child {
   /* margin-right: 2px;
                 margin-left: 8px; */
@@ -122,9 +121,13 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   left: 0;
   right: 0;
 }
-.ui-br-ext-extension .ui-br-ext-menu-container .ui-bt-ext-video-timer {
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-timer {
   display: flex;
   align-items: center;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  height: 10px;
+  border-radius: 6px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown {
   cursor: default;
@@ -193,6 +196,9 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   cursor: pointer;
   margin: 0;
   padding: 0;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-checkbox:disabled {
+  cursor: not-allowed;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-checkbox .ui-br-ext-disclaimer {
   font-size: 11px;
@@ -300,6 +306,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li .ui-br-ext-module-icons {
   display: flex;
+  width: 30px;
   cursor: pointer;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li .ui-br-ext-module-icons span {
@@ -717,6 +724,65 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   color: #707070;
   pointer-events: none;
   cursor: not-allowed;
+}
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder .ui-br-ext-operator {
+  display: flex;
+  align-items: center;
+}
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder .ui-br-ext-video-timer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  height: 10px;
+  border-radius: 6px;
+  margin: 0 10px;
+}
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder .ui-br-ext-video-timer div {
+  background: #e04414;
+  height: 100%;
+  border-radius: 6px;
+}
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder .ui-br-ext-preview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000090;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder .ui-br-ext-preview .ui-br-ext-video-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder .ui-br-ext-preview .ui-br-ext-video-box .ui-br-ext-close {
+  position: absolute;
+  top: -30px;
+  right: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: #00000080;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder .ui-br-ext-preview .ui-br-ext-video-box video {
+  width: 90%;
+  height: auto;
 }
 @-webkit-keyframes spin {
   0% {
