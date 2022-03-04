@@ -781,8 +781,8 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   cursor: pointer;
 }
 .ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder .ui-br-ext-preview .ui-br-ext-video-box video {
-  width: 90%;
-  height: auto;
+  max-width: 95%;
+  max-height: 85vh;
 }
 @-webkit-keyframes spin {
   0% {
