@@ -219,7 +219,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-textarea textarea {
   font-family: arial;
   width: 100%;
-  padding: 6px 14px;
+  padding: 6px 10px;
   border: 1px solid #c4c8c9;
   border-radius: 4px;
   white-space: pre-wrap;
@@ -255,7 +255,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-textarea label {
   position: absolute;
   top: -8px;
-  left: 5px;
+  left: 7px;
   padding: 0px 3px;
   background-color: #ffffff;
   font-size: 11px;
@@ -267,7 +267,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   max-width: 250px;
   position: absolute;
   bottom: -13px;
-  left: 2px;
+  left: 10px;
   display: block;
   color: red;
 }
@@ -555,6 +555,14 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container {
   margin-top: 20px;
+  margin-bottom: 30px;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container.ui-br-ext-checkbox,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container.ui-br-ext-checkbox,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container.ui-br-ext-checkbox,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container.ui-br-ext-checkbox,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-settings-container .ui-br-ext-settings-body .ui-br-ext-form-container.ui-br-ext-checkbox {
+  margin-bottom: 0;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-info-list,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-info-list,
@@ -721,9 +729,8 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   color: #404040;
 }
 .ui-br-ext-extension .ui-br-ext-disabled {
-  color: #707070;
-  pointer-events: none;
-  cursor: not-allowed;
+  color: #8f8e8e;
+  pointer-events: none!important;
 }
 .ui-br-ext-extension .ui-br-ext-menu-container .ui-br-ext-video-recorder {
   display: flex;
