@@ -261,6 +261,15 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   font-size: 11px;
   font-weight: normal !important;
 }
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-file-upload {
+  margin: 20px 0;
+  padding-left: 5px;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-file-upload label {
+  position: absolute;
+  top: -20px;
+  font-size: 13px;
+}
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-icon {
   position: absolute;
   right: 6px;
