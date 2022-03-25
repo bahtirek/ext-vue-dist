@@ -678,22 +678,32 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-close-details:hover {
   font-weight: bold;
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp.ui-br-ext-file-upload {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload {
   margin: 20px 0;
   padding-left: 5px;
-  /* label {
-                    position: absolute;
-                    top: -20px;
-                    font-size: 13px;
-                } */
+  display: block;
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp.ui-br-ext-file-upload label {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload label {
+  color: #00ad55;
   cursor: pointer;
 }
-.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp.ui-br-ext-file-upload #ui-br-ext-upload {
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload label span {
+  color: #666666;
+  font-size: 12px;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload #ui-br-ext-upload {
   opacity: 0;
   position: absolute;
   z-index: -1;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload ul {
+  display: block;
+  padding: 0 0 0 28px;
+  font-size: 15px;
+  color: #707070;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload ul li {
+  padding-top: 5px;
 }
 .ui-br-ext-extension .ui-br-ext-message {
   font-size: 10px;
