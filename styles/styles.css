@@ -334,6 +334,11 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn {
   color: #00ad55;
 }
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn.disabled {
+  color: #c4c8c7;
+  pointer-events: none;
+  cursor: not-allowed;
+}
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn-danger {
   color: #e04414;
 }
@@ -600,6 +605,13 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   color: #00ad55;
   padding-left: 5px;
 }
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-report-form .ui-br-ext-form-container.ui-br-ext-textarea,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-report-form .ui-br-ext-form-container.ui-br-ext-textarea,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-drop-body .ui-br-ext-report-form .ui-br-ext-form-container.ui-br-ext-textarea,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-settings .ui-br-ext-drop-body .ui-br-ext-report-form .ui-br-ext-form-container.ui-br-ext-textarea,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-report-form .ui-br-ext-form-container.ui-br-ext-textarea {
+  margin-bottom: 25px;
+}
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-box-resize,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-box-resize,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments .ui-br-ext-box-resize,
@@ -629,6 +641,10 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review.ui-br-ext-active {
   display: flex;
 }
+.ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-report-bug,
+.ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-review {
+  width: 500px;
+}
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments {
   height: 300px;
 }
@@ -651,7 +667,6 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-spinner::before {
   content: "";
   background-image: url("chrome-extension://__MSG_@@extension_id__/assets/spinner.svg");
-  background-image: url("../assets/spinner.svg");
   position: absolute;
   top: -5px;
   left: 0;
@@ -679,7 +694,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
   font-weight: bold;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload {
-  margin: 20px 0;
+  margin: 20px 0 0;
   padding-left: 5px;
   display: block;
 }
@@ -698,12 +713,23 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload ul {
   display: block;
-  padding: 0 0 0 28px;
+  padding: 4px 0 0 0px;
   font-size: 15px;
+  margin-bottom: 10px;
   color: #707070;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload ul li {
-  padding-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload ul li span {
+  padding-right: 3px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-file-upload-comp .ui-br-ext-file-upload ul li span:first-child:hover {
+  cursor: pointer;
 }
 .ui-br-ext-extension .ui-br-ext-message {
   font-size: 10px;
