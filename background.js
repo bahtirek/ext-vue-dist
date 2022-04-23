@@ -1,10 +1,19 @@
 
-chrome.browserAction.onClicked.addListener(buttonClicked);
+chrome.action.onClicked.addListener(buttonClicked);
 function buttonClicked(tab) {
   chrome.tabs.sendMessage(tab.id, "inject");
-  chrome.tabs.executeScript(tab.id, {file: 'app.js'});
-  chrome.tabs.executeScript(tab.id, {file: 'chunk-vendors.js'});
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    files: ['app.js']
+  });
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    files: ['chunk-vendors.js']
+  });
 }
+
+
+
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.todo == 'getImage') {

@@ -2,7 +2,7 @@
   "name": "Bug Report",
   "description": "Bug report",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "background": {
       "service_worker": "background.js"
   },
@@ -17,10 +17,11 @@
           "css": ["styles/styles.css"]
       }
   ],
-  "web_accessible_resources": [
-      "assets/spinner.svg"
-  ],
-  "permissions": ["storage", "activeTab", "declarativeContent"],
+  "web_accessible_resources": [{
+      "resources": ["assets/spinner.svg"],
+      "matches": ["<all_urls>"]
+  }],
+  "permissions": ["storage", "activeTab", "declarativeContent", "scripting"],
   "commands": {
       "trigger_select": {
         "suggested_key": {
@@ -37,7 +38,15 @@
         "description": "Hot Key for Screenshot"
       }
   },
-  "browser_action": {
-      "default_icon": "assets/icon.png"
+  "icons": { 
+    "48":  "assets/icon.png",
+    "128":  "assets/icon.png"
+  },
+  "action": {
+      "default_icon": {
+        "48":  "assets/icon.png",
+        "128":  "assets/icon.png"
+      }
   }
+
 }

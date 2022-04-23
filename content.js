@@ -40,6 +40,5 @@ async function gotMessage(message, sender, sendResponse) {
         window.selectButtonComponent.getScreenshot();
         // turn on report bug
     }
-    
-    return true;
+    sendResponse('success');
 }
