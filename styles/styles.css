@@ -485,6 +485,7 @@ body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-review .ui-br-ext-drop-body .ui-br-ext-review-box pre a {
   text-decoration: none;
   color: #00ad55;
+  cursor: pointer;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-report-bug .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-select .ui-br-ext-drop-body .ui-br-ext-review-box.ui-br-ext-ellipsis,
