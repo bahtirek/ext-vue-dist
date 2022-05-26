@@ -22,6 +22,9 @@
       "matches": ["<all_urls>"]
   }],
   "permissions": ["storage", "activeTab", "declarativeContent", "scripting"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "commands": {
       "trigger_select": {
         "suggested_key": {
