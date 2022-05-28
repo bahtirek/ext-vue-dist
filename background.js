@@ -1,6 +1,7 @@
 
 chrome.action.onClicked.addListener(buttonClicked);
 function buttonClicked(tab) {
+  console.log(tab);
   chrome.tabs.sendMessage(tab.id, "inject");
   chrome.scripting.executeScript({
     target: {tabId: tab.id},
@@ -47,3 +48,10 @@ chrome.commands.onCommand.addListener((command) => {
     });
   }
 });
+
+chrome.tabs.onUpdated.addListener(
+  (tabId, changeInfo, tab)=>{
+    if(tabId == 857)
+    console.log('myTab');
+  }
+)
