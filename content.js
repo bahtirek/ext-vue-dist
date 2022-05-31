@@ -40,5 +40,10 @@ async function gotMessage(message, sender, sendResponse) {
         window.selectButtonComponent.getScreenshot();
         // turn on report bug
     }
+
+    if (message == "stop-video-recording") {
+        console.log('turn video off');
+        window.stopRecordButton.stopRecord();
+    }
     sendResponse('success');
 }

@@ -1,7 +1,6 @@
 
 chrome.action.onClicked.addListener(buttonClicked);
 function buttonClicked(tab) {
-  console.log(tab);
   chrome.tabs.sendMessage(tab.id, "inject");
   chrome.scripting.executeScript({
     target: {tabId: tab.id},
@@ -21,10 +20,21 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     console.log(request.todo);
     chrome.tabs.captureVisibleTab(null, {format: 'png'}, (dataUrl) => {
       sendResponse({imgSrc:dataUrl});
-    }
-  );
-
-  return true;
+    });
+ 
+    return true;
+  }
+  if (request.todo == 'setAlarm') {
+    console.log(request.todo);
+    chrome.alarms.create('videoAlarm', {
+      delayInMinutes: 1
+    });
+    return true;
+  }
+  if (request.todo == 'clearAlarm') {
+    console.log(request.todo);
+    chrome.alarms.clearAll();
+    return true;
   }
 })
 
@@ -49,9 +59,8 @@ chrome.commands.onCommand.addListener((command) => {
   }
 });
 
-chrome.tabs.onUpdated.addListener(
-  (tabId, changeInfo, tab)=>{
-    if(tabId == 857)
-    console.log('myTab');
-  }
-)
+chrome.alarms.onAlarm.addListener(() => {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+    chrome.tabs.sendMessage(tabs[0].id, "stop-video-recording");  
+  });
+})
