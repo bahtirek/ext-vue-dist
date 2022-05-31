@@ -796,7 +796,8 @@ body.ui-br-ext-freeze {
   display: flex;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-report-bug,
-.ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-review {
+.ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-review,
+.ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-settings {
   width: 500px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments {
