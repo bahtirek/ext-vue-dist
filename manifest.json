@@ -21,7 +21,7 @@
       "resources": ["assets/spinner.svg"],
       "matches": ["<all_urls>"]
   }],
-  "permissions": ["storage", "activeTab", "declarativeContent", "scripting"],
+  "permissions": ["alarms", "storage", "activeTab", "declarativeContent", "scripting"],
   "host_permissions": [
     "<all_urls>"
   ],
