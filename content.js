@@ -18,7 +18,7 @@ async function gotMessage(message, sender, sendResponse) {
      * Triggered on extention button click.
      *  */ 
     if (message === 'inject') {
-        const extention = document.getElementById("ui-br-ext-extension-container");
+        const extention = document.getElementById("ui-br-ext-extension");
         if(extention) {
             window.destroyeUibrextInstance()
         } else {
