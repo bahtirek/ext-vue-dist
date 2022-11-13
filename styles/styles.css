@@ -9,6 +9,12 @@ body.ui-br-ext-freeze {
   pointer-events: none!important;
   overflow: hidden!important;
 }
+body .ui-br-ext-selected-element-outline-red {
+  outline: red dashed 3px !important;
+}
+body .ui-br-ext-selected-element-outline-green {
+  outline: #4fff00 dashed 3px !important;
+}
 .ui-br-ext-bug-cover {
   z-index: 1000;
   position: absolute;
@@ -272,6 +278,7 @@ body.ui-br-ext-freeze {
   outline: none !important;
   display: block!important;
   box-shadow: none!important;
+  line-height: normal !important;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-text input[type=text]:focus,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container.ui-br-ext-textarea input[type=text]:focus,
@@ -373,10 +380,11 @@ body.ui-br-ext-freeze {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn:hover,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn-danger:hover {
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn:active,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn-danger:active {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px !important;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-btn {
   color: #00ad55 !important;
@@ -822,6 +830,13 @@ body.ui-br-ext-freeze {
 .ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-review,
 .ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-settings {
   width: 500px;
+}
+@media (max-width: 767px) {
+  .ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-report-bug,
+  .ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-review,
+  .ui-br-ext-extension .ui-br-ext-dropdown #ui-br-ext-settings {
+    width: 92%;
+  }
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-comments {
   height: 300px;
