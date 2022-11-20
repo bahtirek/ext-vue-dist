@@ -338,11 +338,14 @@ body .ui-br-ext-selected-element-outline-green {
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li:hover,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li.ui-br-ext-hovered {
   background-color: #f7f7f7;
-  margin-bottom: 2px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li:hover .ui-br-ext-module-icons span,
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li.ui-br-ext-hovered .ui-br-ext-module-icons span {
   display: flex;
+}
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li:hover.ui-br-ext-mb-2,
+.ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li.ui-br-ext-hovered.ui-br-ext-mb-2 {
+  margin-bottom: 2px;
 }
 .ui-br-ext-extension .ui-br-ext-dropdown .ui-br-ext-dropdown-item .ui-br-ext-form-container .ui-br-ext-search-results ul li .ui-br-ext-module-label:not(.ui-br-ext-no-hover):hover {
   cursor: pointer;
