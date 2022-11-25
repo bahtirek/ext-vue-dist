@@ -2,7 +2,7 @@ body .ui-br-ext-hovered {
   outline: 1px dashed!important;
   outline-color: red!important;
 }
-body.ui-br-ext-hide-hovered .ui-br-ext-hovered {
+body.ui-br-ext-hide-hovered .ui-br-ext-hovered:not(.ui-br-ext-selected-element-outline-red) {
   outline: none!important;
 }
 body.ui-br-ext-freeze {
