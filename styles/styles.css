@@ -15,6 +15,9 @@ body .ui-br-ext-selected-element-outline-red {
 body .ui-br-ext-selected-element-outline-green {
   outline: #4fff00 dashed 3px !important;
 }
+body .ui-br-ext-outlined-element.ui-br-ext-outlined-element-childs-no-events * {
+  pointer-events: none !important;
+}
 .ui-br-ext-bug-cover {
   z-index: 1000;
   position: absolute;
