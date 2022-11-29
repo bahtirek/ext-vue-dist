@@ -1194,6 +1194,9 @@ body .ui-br-ext-outlined-element.ui-br-ext-outlined-element-childs-no-events * {
   right: 0;
   background-color: #00000033;
 }
+.ui-br-ext-extension li::marker {
+  content: "" !important;
+}
 /* List default styling */
 .ui-br-ext-extension .ui-br-ext-default-list {
   list-style-type: initial !important;
